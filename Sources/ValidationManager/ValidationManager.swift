@@ -16,7 +16,7 @@ public struct EmailValidator {
     }
 }
 //Password Validations
-extension String {
+public extension String {
   
   func isContainsNumbers() -> Bool {
       // check if there's a number
