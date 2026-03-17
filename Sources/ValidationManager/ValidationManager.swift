@@ -119,11 +119,10 @@ public extension String {
   }
     
   func isContainsSpecialChar() -> Bool {
-      // check if there's a Special case
-      let specialLetterRegEx  = ".*[!&^%$#@()/_*+-]+.*"
-      let textTestSpecial = NSPredicate(format:"SELF MATCHES %@", specialLetterRegEx)
+      // check if there's a Special character
+      let specialLetterRegEx = ".*[!&^%$#@()/_*+\\-\\.\\?]+.*"
+      let textTestSpecial = NSPredicate(format: "SELF MATCHES %@", specialLetterRegEx)
       let specialResult = textTestSpecial.evaluate(with: self)
-      // false if no Special char is found
       return specialResult
   }
   
